@@ -1,2 +1,0 @@
-Error: no se ha encontrado o cargado la clase principal Sumador
-Causado por: java.lang.ClassNotFoundException: Sumador
