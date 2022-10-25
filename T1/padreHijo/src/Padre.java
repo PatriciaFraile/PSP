@@ -10,31 +10,22 @@ public class Padre {
 
         try {
 
-// Llamar a la clase Hijo compilada anteriormente
-
-            Process hijo = new ProcessBuilder("java","src/Hijo.java").start();
-
-// Buffer para datos del proceso hijo
+            Process hijo = new ProcessBuilder("java", "src/Hijo.java").start();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(hijo.getInputStream()));
 
-// Stream salida
 
             PrintStream ps = new PrintStream(hijo.getOutputStream(), true);
 
-// Buffer que lee de consola
-
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Bienvenido al generador de tu contraseña del dni electronico");
 
-            System.out.println("Escribe tu nombre y tus apellidos ");
+            System.out.println("Por favor  escribe tu dni ");
 
-// Enviar mensaje al hijo
 
             line = in.readLine();
 
             ps.println(line);
-
-// Recibir información del padre 
 
             line = br.readLine();
 
