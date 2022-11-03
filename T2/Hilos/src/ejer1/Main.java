@@ -6,7 +6,7 @@ public class Main {
         HiloA hiloA = new HiloA("HILOA", contador);
         HiloB hiloB = new HiloB("HILOB", contador);
         hiloA.start();
-        hiloA.join();
+      //hiloA.join();
         hiloB.start();
     }
 }
