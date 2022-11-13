@@ -18,7 +18,6 @@ public class Hijo extends Thread {
             try {
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                 leer = new String();
-
                 leer = " Hola " + br.readLine() + ", tu contraseña de tu dni electrónico es: ";
                 System.out.println(leer + contrasenia);
 
