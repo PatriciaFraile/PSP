@@ -32,7 +32,7 @@ public class Padre {
             PrintStream ps = new PrintStream(hijo.getOutputStream(), true);
 
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Por favor introducir vuestros DNIs (separados por comas cada DNI)");
+            System.out.println("Por favor introducir vuestros DNIs (separados por coma cada DNI)");
 
 
             line = in.readLine();
@@ -49,4 +49,5 @@ public class Padre {
 
     }
 }
+
 

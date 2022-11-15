@@ -10,8 +10,8 @@ public class Entrada extends Thread {
 
     public void correr() {
         try {
-            System.out.println("Hola " + padre.getNombre() + " bienvenido al generador " +
-                    "de contraseñas del DNI electónico");
+            System.out.println("Hola " + padre.getNombre() + " bienvenidos al generador " +
+                    "de contraseñas del DNI electrónico");
             Thread.sleep(100);
             ProcessBuilder padre1 = new ProcessBuilder("java", "src/Padre.java");
             padre1.inheritIO();
@@ -29,7 +29,7 @@ public class Entrada extends Thread {
         correr();
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
         Entrada entrada1 = new Entrada(new Padre("Jaimito , Pepito y Andrea"));
         entrada1.start();
     }

@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Hijo {
 
@@ -21,7 +20,7 @@ public class Hijo {
             dos = listar[1];
             tres = listar[2];
             for (int i = 0; i < listar.length; i++) {
-                System.out.print(listar[i] + " tu contraseña es: " + generarContrasenia() + " , ");
+                System.out.print("\t"+listar[i] + " tu contraseña es: " + generarContrasenia());
             }
 
         } catch (IOException e) {
