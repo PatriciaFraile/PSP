@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 
 public class Entrada extends Thread {
@@ -31,14 +30,7 @@ public class Entrada extends Thread {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Entrada entrada1 = new Entrada(new Padre("Jaimito"));
+        Entrada entrada1 = new Entrada(new Padre("Jaimito , Pepito y Andrea"));
         entrada1.start();
-        Entrada entrada2 = new Entrada(new Padre("Pepito"));
-        entrada2.start();
-        Entrada entrada3 = new Entrada(new Padre("Andrea"));
-        entrada3.start();
-
-
-
     }
 }

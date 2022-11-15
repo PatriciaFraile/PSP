@@ -1,21 +1,28 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Hijo {
 
 
     public static void main(String[] args) {
         String leer;
-
+        String[] listar;
+        String uno, dos, tres;
 
 
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             leer = new String();
-
-            leer = br.readLine() + " tu contraseña de tu dni electrónico es: ";
-            System.out.println(leer + generarContrasenia());
+            leer = br.readLine();
+            listar = leer.split(",");
+            uno = listar[0];
+            dos = listar[1];
+            tres = listar[2];
+            for (int i = 0; i < listar.length; i++) {
+                System.out.print(listar[i] + " tu contraseña es: " + generarContrasenia() + " , ");
+            }
 
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());

@@ -10,6 +10,7 @@ public class Padre {
         this.nombre = nombre;
     }
 
+
     public String getNombre() {
         return nombre;
     }
@@ -31,7 +32,7 @@ public class Padre {
             PrintStream ps = new PrintStream(hijo.getOutputStream(), true);
 
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Por favor  escribe tu dni ");
+            System.out.println("Por favor introducir vuestros DNIs (separados por comas cada DNI)");
 
 
             line = in.readLine();
