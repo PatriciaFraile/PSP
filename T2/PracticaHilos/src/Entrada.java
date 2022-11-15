@@ -33,10 +33,8 @@ public class Entrada extends Thread {
     public static void main(String[] args) throws InterruptedException {
         Entrada entrada1 = new Entrada(new Padre("Jaimito"));
         entrada1.start();
-        Thread.sleep(5000);
         Entrada entrada2 = new Entrada(new Padre("Pepito"));
         entrada2.start();
-        Thread.sleep(5000);
         Entrada entrada3 = new Entrada(new Padre("Andrea"));
         entrada3.start();
 
