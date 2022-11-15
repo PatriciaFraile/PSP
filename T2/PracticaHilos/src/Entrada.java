@@ -1,9 +1,9 @@
+
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Entrada extends Thread {
     private Padre padre;
-    private String line;
+
 
     public Entrada(Padre padre) {
         this.padre = padre;
@@ -13,7 +13,7 @@ public class Entrada extends Thread {
         try {
             System.out.println("Hola " + padre.getNombre() + " bienvenido al generador " +
                     "de contraseñas del DNI electónico");
-            Thread.sleep(10);
+            Thread.sleep(100);
             ProcessBuilder padre1 = new ProcessBuilder("java", "src/Padre.java");
             padre1.inheritIO();
             Process process = padre1.start();
@@ -30,13 +30,16 @@ public class Entrada extends Thread {
         correr();
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Escribe tu nombre");
-        String nombre = scanner.next();
-        Padre padre1 = new Padre(nombre);
-        Entrada entrada = new Entrada(padre1);
-        entrada.start();
+    public static void main(String[] args) throws InterruptedException {
+        Entrada entrada1 = new Entrada(new Padre("Jaimito"));
+        entrada1.start();
+        Thread.sleep(5000);
+        Entrada entrada2 = new Entrada(new Padre("Pepito"));
+        entrada2.start();
+        Thread.sleep(5000);
+        Entrada entrada3 = new Entrada(new Padre("Andrea"));
+        entrada3.start();
+
 
 
     }
