@@ -64,4 +64,4 @@ public class ConnectionPost {
         echo (int)$_POST['edad'];
 
         ?>
-*/
+*/ 
