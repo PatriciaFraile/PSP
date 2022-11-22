@@ -30,6 +30,38 @@ public class ConnectionPost {
             throw new RuntimeException(e);
         }
 
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new InputStreamReader(hc.getInputStream()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+        while(true)
+        {
+            try {
+                if (!((inputline = br.readLine()) != null)) break;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(inputline);
+        }
+        try {
+            br.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+
+
+/*
+
+<?php
+
+        echo htmlspecialchars($_POST['nombre']);
+
+        echo (int)$_POST['edad'];
+
+        ?>
+*/
