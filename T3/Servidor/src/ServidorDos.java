@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.ServerSocket;
+//con hilos
 
 public class ServidorDos {
     public static void main(String[] args) {
