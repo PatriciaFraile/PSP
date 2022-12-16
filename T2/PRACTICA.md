@@ -1,3 +1,3 @@
-#La práctica tiene que contener:
-# Procesos 
-# Hilos
+La práctica tiene que contener:
+- Procesos 
+- Hilos
