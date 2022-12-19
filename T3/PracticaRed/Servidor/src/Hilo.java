@@ -17,7 +17,7 @@ public class Hilo extends Thread{
         try {
             PrintWriter out = new PrintWriter(cliente.getOutputStream(),true);
             BufferedReader in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
-            out.println("Escribe tu nombre y tu dni (separado por coma)");
+            out.println("Escribe tu nombre");
             String inputLine = in.readLine();
             System.out.println("Nombre : " +inputLine);
             out.println("Escribe tu dni , por favor "+inputLine);
@@ -30,9 +30,9 @@ public class Hilo extends Thread{
             String contrasenia = generarContrasenia();
             out.println("Tu contraseña es: "+contrasenia);
             System.out.println("Contraseña dni electrónico: "+contrasenia);
+            System.out.println("Cliente desconectado");
             out.close();
             in.close();
-            System.out.println("Cliente desconectado");
             cliente.close();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
