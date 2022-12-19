@@ -23,6 +23,8 @@ public class Cliente{
                 out.println(dni);
                 BufferedReader in2 = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
                 System.out.println(in2.readLine());
+                BufferedReader in3 = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                System.out.println(in3.readLine());
                 out.close();
                 in.close();
                 cliente.close();
