@@ -5,15 +5,15 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Cliente{
+public class Cliente {
     public static void main(String[] args) {
         Scanner entradaTeclado = new Scanner(System.in);
         Socket cliente;
 
         {
             try {
-                cliente = new Socket("localhost",9999);
-                PrintWriter out = new PrintWriter(cliente.getOutputStream(),true);
+                cliente = new Socket("localhost", 9999);
+                PrintWriter out = new PrintWriter(cliente.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
                 System.out.println(in.readLine());
                 String nombre = entradaTeclado.next();

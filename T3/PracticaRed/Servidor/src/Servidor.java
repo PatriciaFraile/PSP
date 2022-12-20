@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Scanner;
 
 public class Servidor {
@@ -9,12 +10,11 @@ public class Servidor {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(9999);
-
+            System.out.println("Esperando...");
             while (true) {
                 new Hilo(serverSocket.accept()).start();
                 System.out.println("Cliente conectado");
             }
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
