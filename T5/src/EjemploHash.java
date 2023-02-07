@@ -4,7 +4,8 @@ import java.security.NoSuchAlgorithmException;
 public class EjemploHash {
     public static void main(String[] args) {
         MessageDigest md;
-        String palabra = "hola";
+
+        String palabra = "que";
         try {
             md = MessageDigest.getInstance("SHA");
             byte dataByte[] = palabra.getBytes();
